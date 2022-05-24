@@ -19,9 +19,26 @@
 int	main(void)
 {
 	int	fd = open("/Users/kkaczoro/Desktop/projects/getnextt/get_next_line/text.txt", O_RDONLY);
-	char	*str = get_next_line(fd);
+	//char	*str = get_next_line(fd);
 
-	printf("get_next_line: %s\n", str);
+	printf("get_next_line: %s\n", get_next_line(fd));
+	printf("get_next_line: %s\n", get_next_line(fd));
+	printf("get_next_line: %s\n", get_next_line(fd));
+	printf("get_next_line: %s\n", get_next_line(fd));
+	printf("get_next_line: %s\n", get_next_line(fd));
+	printf("get_next_line: %s\n", get_next_line(fd));
+
+	close(fd);
+	
+	// while (str != NULL)
+	// {
+	// 	printf("get_next_line: %s\n", str);
+	// 	str = get_next_line(fd);
+	// }
+	/*
+	printf("get_next_line: %s\n", get_next_line(fd));
+	printf("get_next_line: %s\n", get_next_line(fd));
+	*/
 	//printf("len_GNL      : %lu\n", strlen(str));
 	// printf("get_next_line: %s\n", get_next_line(fd));
 	// printf("buffer	: %s\n", get_next_line(fd));

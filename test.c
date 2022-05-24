@@ -19,15 +19,14 @@
 int	main(void)
 {
 	int	fd = open("/Users/kkaczoro/Desktop/projects/getnextt/get_next_line/text.txt", O_RDONLY);
-	//char	*str = get_next_line(fd);
+	char	*str = get_next_line(fd);
+	int		i = 1;
 
-	printf("get_next_line: %s\n", get_next_line(fd));
-	printf("get_next_line: %s\n", get_next_line(fd));
-	printf("get_next_line: %s\n", get_next_line(fd));
-	printf("get_next_line: %s\n", get_next_line(fd));
-	printf("get_next_line: %s\n", get_next_line(fd));
-	printf("get_next_line: %s\n", get_next_line(fd));
-
+	while (str != NULL)
+	{
+		printf("nb: %d\nlen: %ld\nline: %s\n____________________________________\n", i++, strlen(str), str);
+		str = get_next_line(fd);
+	}
 	close(fd);
 	
 	// while (str != NULL)

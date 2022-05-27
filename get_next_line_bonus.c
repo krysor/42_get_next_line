@@ -6,7 +6,7 @@
 /*   By: kkaczoro <kkaczoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 18:35:38 by kkaczoro          #+#    #+#             */
-/*   Updated: 2022/05/26 19:49:10 by kkaczoro         ###   ########.fr       */
+/*   Updated: 2022/05/27 12:38:10 by kkaczoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ static char	*ft_fuse(char *temp, char *new_line)
 	len_temp = ft_strlen(temp);
 	len_new = ft_strlen(new_line);
 	next_line = malloc(sizeof(char) * (len_temp + len_new) + 1);
+	if (next_line == NULL)
 	{
 		free (temp);
 		free (new_line);

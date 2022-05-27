@@ -6,7 +6,7 @@
 /*   By: kkaczoro <kkaczoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 18:36:35 by kkaczoro          #+#    #+#             */
-/*   Updated: 2022/05/24 11:47:25 by kkaczoro         ###   ########.fr       */
+/*   Updated: 2022/05/27 19:35:40 by kkaczoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-
-# include <stdio.h> //remove later
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE=10

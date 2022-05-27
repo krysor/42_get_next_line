@@ -6,17 +6,15 @@
 /*   By: kkaczoro <kkaczoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 18:36:35 by kkaczoro          #+#    #+#             */
-/*   Updated: 2022/05/24 11:47:25 by kkaczoro         ###   ########.fr       */
+/*   Updated: 2022/05/27 19:36:35 by kkaczoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # include <unistd.h>
 # include <stdlib.h>
-
-# include <stdio.h> //remove later
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE=10

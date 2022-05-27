@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkaczoro <kkaczoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 18:35:38 by kkaczoro          #+#    #+#             */
-/*   Updated: 2022/05/27 12:38:10 by kkaczoro         ###   ########.fr       */
+/*   Updated: 2022/05/27 19:37:27 by kkaczoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,18 @@ static char	*ft_fuse(char *temp, char *new_line);
 
 char	*get_next_line(int fd)
 {
-	static char	buffer[BUFFER_SIZE];
+	static char	buffer[10240][BUFFER_SIZE];
 	char		*new_line;
 
 	if (BUFFER_SIZE <= 0 || fd < 0
-		|| (ft_strlen(buffer) == 0 && read(fd, buffer, BUFFER_SIZE) <= 0))
+		|| (ft_strlen(buffer[fd]) == 0
+			&& read(fd, buffer[fd], BUFFER_SIZE) <= 0))
 		return (NULL);
-	new_line = ft_memchr(buffer, '\n', BUFFER_SIZE);
+	new_line = ft_memchr(buffer[fd], '\n', BUFFER_SIZE);
 	if (new_line)
-		return (ft_new_line(buffer, new_line));
+		return (ft_new_line(buffer[fd], new_line));
 	else
-		return (ft_no_new_line(fd, buffer));
+		return (ft_no_new_line(fd, buffer[fd]));
 }
 
 static char	*ft_new_line(char *buffer, char *new_line)
